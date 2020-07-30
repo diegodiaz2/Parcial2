@@ -88,3 +88,13 @@ void planetas::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, 
         painter->drawEllipse(boundingRect());
     }
 }
+
+void planetas::cambiar_color()
+{
+    n=1;
+    QPainter *pa=new QPainter();
+    pa->setBrush(Qt::black);
+    QStyleOptionGraphicsItem *option;
+    QWidget *widget;
+    this->paint(pa,option,widget);
+}

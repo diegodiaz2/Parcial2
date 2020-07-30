@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 #include <math.h>
 
+MainWindow * MainWindow::pMainWindow = nullptr;
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -23,6 +25,7 @@ MainWindow::MainWindow(QWidget *parent)
     escena->addItem(planeta5);
     connect(t,SIGNAL(timeout()),this,SLOT(ejecutar()));
     t->start(10);
+    pMainWindow=this;
 }
 
 MainWindow::~MainWindow()
@@ -91,4 +94,9 @@ void MainWindow::ejecutar()
     y=y+vy;
     planeta5->setPos(x/20,-y/20);
     planeta5->actualizar(x,y,vx,vy);
+}
+
+MainWindow *MainWindow::getMainWinPtr()
+{
+    return pMainWindow;
 }

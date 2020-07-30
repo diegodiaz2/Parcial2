@@ -18,6 +18,13 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
+    static MainWindow *getMainWinPtr();
+    QGraphicsScene *escena;
+    planetas *planeta1;
+    planetas *planeta2;
+    planetas *planeta3;
+    planetas *planeta4;
+    planetas *planeta5;
     ~MainWindow();
 
 private slots:
@@ -26,15 +33,10 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    static MainWindow * pMainWindow;
     int k, n=0, n_planetas=0;
     double xo,yo,vxo,vyo, T=0.01, a=-9.8;
     QTimer *t;
-    QGraphicsScene *escena;
-    planetas *planeta1;
-    planetas *planeta2;
-    planetas *planeta3;
-    planetas *planeta4;
-    planetas *planeta5;
     objeto *bola;
 };
 #endif // MAINWINDOW_H

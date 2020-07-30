@@ -22,6 +22,7 @@ public:
     double getM();
     QRectF boundingRect() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr);
+    void cambiar_color();
 };
 
 #endif // PLANETAS_H

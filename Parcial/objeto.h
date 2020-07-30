@@ -11,7 +11,7 @@ class objeto:public QObject, public QGraphicsItem
 public:
     int r=4;
     double posx, posy,y0;
-    double vely,ay;
+    double vely=0,ay;
     double yd;
     objeto();
     QRectF boundingRect() const;

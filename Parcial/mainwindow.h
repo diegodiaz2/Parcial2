@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include "planetas.h"
+#include "objeto.h"
 
 #include <QMainWindow>
 #include <QTimer>
@@ -34,5 +35,6 @@ private:
     planetas *planeta3;
     planetas *planeta4;
     planetas *planeta5;
+    objeto *bola;
 };
 #endif // MAINWINDOW_H

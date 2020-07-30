@@ -33,7 +33,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-
+    bola=new objeto();
+    escena->addItem(bola);
 }
 
 void MainWindow::ejecutar()

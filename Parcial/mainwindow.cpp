@@ -17,9 +17,9 @@ MainWindow::MainWindow(QWidget *parent)
     escena->addItem(planeta2);
     planeta3=new planetas(3,70,5000,0,0,2,70);
     escena->addItem(planeta3);
-    planeta4=new planetas(4,70,0,5000,2,0,70);
+    planeta4=new planetas(4,70,0,-5000,2,0,70);
     escena->addItem(planeta4);
-    planeta5=new planetas(5,70,0,-5000,-2,0,70);
+    planeta5=new planetas(5,70,0,5000,-2,0,70);
     escena->addItem(planeta5);
     connect(t,SIGNAL(timeout()),this,SLOT(ejecutar()));
     t->start(10);

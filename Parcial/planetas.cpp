@@ -6,7 +6,7 @@ planetas::planetas(int planeta,double r_, double x, double y,double vxo, double 
     r = r_/20;
     posx = x/20;
     posy = y/20;
-    setPos(posx,posy);
+    setPos(posx,-posy);
     vx=vxo;
     vy=vyo;
     m=mo;
